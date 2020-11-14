@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/worldwide.png">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <title>Tour Guide</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="header-left">
+                <div class="logo">TOUR-GUIDE</div>
+                <div class="nav-menu">
+                    <ul class="menu" id="menu">
+                        <li><a href="#welcome">Stories</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#write-us">Write to us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header-right">
+                <ul class="social">
+                    <li>
+                        <svg version="1.1" class="twitter-logo" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                        <g>
+                            <g>
+                                <path d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016
+                                    c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992
+                                    c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056
+                                    c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152
+                                    c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792
+                                    c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44
+                                    C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568
+                                    C480.224,136.96,497.728,118.496,512,97.248z"/>
+                            </g>
+                        </g>
+                        </svg>
+                    </li>
+                    <li>
+                        <svg class="facebook-logo" id="Bold" enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"/></svg>
+                    </li>
+                    <li>
+                        <svg class="instagram-logo" height="511pt" viewBox="0 0 511 511.9" width="511pt" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <radialGradient id="instagram-gradient" r="150%" cx="30%" cy="107%">
+                                    <stop stop-color="#fdf497" offset="0" />
+                                    <stop stop-color="#fdf497" offset="0.05" />
+                                    <stop stop-color="#fd5949" offset="0.45" />
+                                    <stop stop-color="#d6249f" offset="0.6" />
+                                    <stop stop-color="#285AEB" offset="0.9" />
+                                </radialGradient>
+                            </defs>
+                            <path d="m510.949219 150.5c-1.199219-27.199219-5.597657-45.898438-11.898438-62.101562-6.5-17.199219-16.5-32.597657-29.601562-45.398438-12.800781-13-28.300781-23.101562-45.300781-29.5-16.296876-6.300781-34.898438-10.699219-62.097657-11.898438-27.402343-1.300781-36.101562-1.601562-105.601562-1.601562s-78.199219.300781-105.5 1.5c-27.199219 1.199219-45.898438 5.601562-62.097657 11.898438-17.203124 6.5-32.601562 16.5-45.402343 29.601562-13 12.800781-23.097657 28.300781-29.5 45.300781-6.300781 16.300781-10.699219 34.898438-11.898438 62.097657-1.300781 27.402343-1.601562 36.101562-1.601562 105.601562s.300781 78.199219 1.5 105.5c1.199219 27.199219 5.601562 45.898438 11.902343 62.101562 6.5 17.199219 16.597657 32.597657 29.597657 45.398438 12.800781 13 28.300781 23.101562 45.300781 29.5 16.300781 6.300781 34.898438 10.699219 62.101562 11.898438 27.296876 1.203124 36 1.5 105.5 1.5s78.199219-.296876 105.5-1.5c27.199219-1.199219 45.898438-5.597657 62.097657-11.898438 34.402343-13.300781 61.601562-40.5 74.902343-74.898438 6.296876-16.300781 10.699219-34.902343 11.898438-62.101562 1.199219-27.300781 1.5-36 1.5-105.5s-.101562-78.199219-1.300781-105.5zm-46.097657 209c-1.101562 25-5.300781 38.5-8.800781 47.5-8.601562 22.300781-26.300781 40-48.601562 48.601562-9 3.5-22.597657 7.699219-47.5 8.796876-27 1.203124-35.097657 1.5-103.398438 1.5s-76.5-.296876-103.402343-1.5c-25-1.097657-38.5-5.296876-47.5-8.796876-11.097657-4.101562-21.199219-10.601562-29.398438-19.101562-8.5-8.300781-15-18.300781-19.101562-29.398438-3.5-9-7.699219-22.601562-8.796876-47.5-1.203124-27-1.5-35.101562-1.5-103.402343s.296876-76.5 1.5-103.398438c1.097657-25 5.296876-38.5 8.796876-47.5 4.101562-11.101562 10.601562-21.199219 19.203124-29.402343 8.296876-8.5 18.296876-15 29.398438-19.097657 9-3.5 22.601562-7.699219 47.5-8.800781 27-1.199219 35.101562-1.5 103.398438-1.5 68.402343 0 76.5.300781 103.402343 1.5 25 1.101562 38.5 5.300781 47.5 8.800781 11.097657 4.097657 21.199219 10.597657 29.398438 19.097657 8.5 8.300781 15 18.300781 19.101562 29.402343 3.5 9 7.699219 22.597657 8.800781 47.5 1.199219 27 1.5 35.097657 1.5 103.398438s-.300781 76.300781-1.5 103.300781zm0 0"/><path d="m256.449219 124.5c-72.597657 0-131.5 58.898438-131.5 131.5s58.902343 131.5 131.5 131.5c72.601562 0 131.5-58.898438 131.5-131.5s-58.898438-131.5-131.5-131.5zm0 216.800781c-47.097657 0-85.300781-38.199219-85.300781-85.300781s38.203124-85.300781 85.300781-85.300781c47.101562 0 85.300781 38.199219 85.300781 85.300781s-38.199219 85.300781-85.300781 85.300781zm0 0"/><path d="m423.851562 119.300781c0 16.953125-13.746093 30.699219-30.703124 30.699219-16.953126 0-30.699219-13.746094-30.699219-30.699219 0-16.957031 13.746093-30.699219 30.699219-30.699219 16.957031 0 30.703124 13.742188 30.703124 30.699219zm0 0"/></svg>
+                    </li>
+                    <li>
+                        <svg class="youtube-logo" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            width="90.677px" height="90.677px" viewBox="0 0 90.677 90.677" style="enable-background:new 0 0 90.677 90.677;"
+                            xml:space="preserve">
+                        <g>
+                            <g>
+                                <path d="M82.287,45.907c-0.937-4.071-4.267-7.074-8.275-7.521c-9.489-1.06-19.098-1.065-28.66-1.06
+                                    c-9.566-0.005-19.173,0-28.665,1.06c-4.006,0.448-7.334,3.451-8.27,7.521c-1.334,5.797-1.35,12.125-1.35,18.094
+                                    c0,5.969,0,12.296,1.334,18.093c0.936,4.07,4.264,7.073,8.272,7.521c9.49,1.061,19.097,1.065,28.662,1.061
+                                    c9.566,0.005,19.171,0,28.664-1.061c4.006-0.448,7.336-3.451,8.272-7.521c1.333-5.797,1.34-12.124,1.34-18.093
+                                    C83.61,58.031,83.62,51.704,82.287,45.907z M28.9,50.4h-5.54v29.438h-5.146V50.4h-5.439v-4.822H28.9V50.4z M42.877,79.839h-4.629
+                                    v-2.785c-1.839,2.108-3.585,3.136-5.286,3.136c-1.491,0-2.517-0.604-2.98-1.897c-0.252-0.772-0.408-1.994-0.408-3.796V54.311
+                                    h4.625v18.795c0,1.084,0,1.647,0.042,1.799c0.111,0.718,0.462,1.082,1.082,1.082c0.928,0,1.898-0.715,2.924-2.166v-19.51h4.629
+                                    L42.877,79.839L42.877,79.839z M60.45,72.177c0,2.361-0.159,4.062-0.468,5.144c-0.618,1.899-1.855,2.869-3.695,2.869
+                                    c-1.646,0-3.234-0.914-4.781-2.824v2.474h-4.625V45.578h4.625v11.189c1.494-1.839,3.08-2.769,4.781-2.769
+                                    c1.84,0,3.078,0.969,3.695,2.88c0.311,1.027,0.468,2.715,0.468,5.132V72.177z M77.907,67.918h-9.251v4.525
+                                    c0,2.363,0.773,3.543,2.363,3.543c1.139,0,1.802-0.619,2.066-1.855c0.043-0.251,0.104-1.279,0.104-3.134h4.719v0.675
+                                    c0,1.491-0.057,2.518-0.099,2.98c-0.155,1.024-0.519,1.953-1.08,2.771c-1.281,1.854-3.179,2.768-5.595,2.768
+                                    c-2.42,0-4.262-0.871-5.599-2.614c-0.981-1.278-1.485-3.29-1.485-6.003v-8.941c0-2.729,0.447-4.725,1.43-6.015
+                                    c1.336-1.747,3.177-2.617,5.54-2.617c2.321,0,4.161,0.87,5.457,2.617c0.969,1.29,1.432,3.286,1.432,6.015v5.285H77.907z"/>
+                                <path d="M70.978,58.163c-1.546,0-2.321,1.181-2.321,3.541v2.362h4.625v-2.362C73.281,59.344,72.508,58.163,70.978,58.163z"/>
+                                <path d="M53.812,58.163c-0.762,0-1.534,0.36-2.307,1.125v15.559c0.772,0.774,1.545,1.14,2.307,1.14
+                                    c1.334,0,2.012-1.14,2.012-3.445V61.646C55.824,59.344,55.146,58.163,53.812,58.163z"/>
+                                <path d="M56.396,34.973c1.705,0,3.479-1.036,5.34-3.168v2.814h4.675V8.82h-4.675v19.718c-1.036,1.464-2.018,2.188-2.953,2.188
+                                    c-0.626,0-0.994-0.37-1.096-1.095c-0.057-0.153-0.057-0.722-0.057-1.817V8.82h-4.66v20.4c0,1.822,0.156,3.055,0.414,3.836
+                                    C53.854,34.363,54.891,34.973,56.396,34.973z"/>
+                                <path d="M23.851,20.598v14.021h5.184V20.598L35.271,0h-5.242l-3.537,13.595L22.812,0h-5.455c1.093,3.209,2.23,6.434,3.323,9.646
+                                    C22.343,14.474,23.381,18.114,23.851,20.598z"/>
+                                <path d="M42.219,34.973c2.342,0,4.162-0.881,5.453-2.641c0.981-1.291,1.451-3.325,1.451-6.067v-9.034
+                                    c0-2.758-0.469-4.774-1.451-6.077c-1.291-1.765-3.11-2.646-5.453-2.646c-2.33,0-4.149,0.881-5.443,2.646
+                                    c-0.993,1.303-1.463,3.319-1.463,6.077v9.034c0,2.742,0.47,4.776,1.463,6.067C38.069,34.092,39.889,34.973,42.219,34.973z
+                                    M39.988,16.294c0-2.387,0.724-3.577,2.231-3.577c1.507,0,2.229,1.189,2.229,3.577v10.852c0,2.387-0.722,3.581-2.229,3.581
+                                    c-1.507,0-2.231-1.194-2.231-3.581V16.294z"/>
+                            </g>
+                        </g>
+                    </svg>
+                    </li>
+                    <li>
+                        <svg class="gmail-logo"version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                        <g>
+                            <g>
+                                <path d="M464,64h-16H64H48C21.504,64,0,85.504,0,112v16v256v16c0,26.496,21.504,48,48,48h16h384h16c26.496,0,48-21.504,48-48v-16
+                                    V128v-16C512,85.504,490.496,64,464,64z M407.488,96L256,215.616L104.512,96H407.488z M448,416H64V148.672l192,147.68L448,148.64
+                                    V416z"/>
+                            </g>
+                        </g>
+                        </svg>
+                    </li>
+                </ul>
+
+            </div>
+            <span style="font-size:20px;cursor:pointer" onclick="openNav()" class="burger-menu">&#9776;</span>
+            <div id="mySidenav" class="sidenav">
+                <div id="menu-nav">
+                    <div class="logo-nav-mn">Tour-Guide</div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="#welcome">Stories</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#features">Features</a>
+                    <a href="#write-us">Write to us</a>
+                </div>
+              </div>
+        </header>
+        <main>
+            <div class="container">
+                <div class="page" id="welcome">
+                    <section class="start-section">
+                        <div class="text-section half">
+                            <div class="text-section-title">Let's hit the road</div>
+                            <div class="text-section-block">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque totam dolore maiores dolorum accusantium voluptas possimus tenetur nulla laborum architecto aperiam cumque deleniti consequuntur accusamus ipsa corrupti, fugiat ab sapiente</div>
+                            <div class="text-section-sm-block">Ut id risus metus. Vestibulum dictum, nibh eget aliquam blandit, eros angue condimentum ligula, ut bibendum mauris sem en eu dolor.</div>
+                            <input type="submit" value="START" class="button">
+                        </div>
+                        <div class="image-section half" id="first-image"></div>
+                    </section>
+                    <section>
+                        <div class="image-section" id="second-image"></div>
+                        <div class="text-section">
+                            <div class="text-section-title">Story</div>
+                            <div class="text-section-block">Nulla elementum ac tellus vitae posuere. Curabitur id ipsum erat. Sed mattis enim eget mauris consequat, vel interdum ex sodales. Duis ut urna sed odio tempor ultrices. Vivamus non nisi non eros mollis tempus. Praesent gravida, orci ac feugiat aliquam, sem neque congue mauris, ac posuere ligula nibh et dui.</div>
+                            <input type="submit" value="START" class="button">
+                        </div>
+                    </section>
+                    <section class="last-section">
+                        <div class="text-section">
+                            <div class="text-section-title">Story</div>
+                            <div class="text-section-block">Nulla elementum ac tellus vitae posuere. Curabitur id ipsum erat. Sed mattis enim eget mauris consequat, vel interdum ex sodales. Duis ut urna sed odio tempor ultrices. Vivamus non nisi non eros mollis tempus. Praesent gravida, orci ac feugiat aliquam, sem neque congue mauris, ac posuere ligula nibh et dui.</div>
+                            <input type="submit" value="START" class="button">
+                        </div>
+                        <div class="image-section" id="third-image"></div>
+                    </section>
+                </div>
+                <div class="page" id="gallery">    
+                    <div class="pg-section">
+                        <div class="page-title">
+                            Gallery
+                        </div>
+                        <div class="carousel" data-flickity='{"wrapAround": "true","cellAlign": "left", "pageDots": "false"}'>
+                            <div class="carousel-cell img1">
+                                <div class="wrap-img">
+                                    <div class="carousel-cell-title">Title</div>
+                                    <div class="carousel-cell-text">Aenean vulputate, turpis a rutrum tempus, dui quam molestie purus, vitae mattis mi ligula ut eros</div>
+                                    <input type="submit" value="MORE" class="button button-glr">
+                                </div>
+                            </div>
+                            <div class="carousel-cell glr-img  img2">
+                                <div class="wrap-img">
+                                    <div class="carousel-cell-title">Title</div>
+                                    <div class="carousel-cell-text">Aenean vulputate, turpis a rutrum tempus, dui quam molestie purus, vitae mattis mi ligula ut eros</div>
+                                    <input type="submit" value="MORE" class="button button-glr">
+                                </div>
+                            </div>
+                            <div class="carousel-cell glr-img img3">
+                                <div class="wrap-img">
+                                    <div class="carousel-cell-title">Title</div>
+                                    <div class="carousel-cell-text">Aenean vulputate, turpis a rutrum tempus, dui quam molestie purus, vitae mattis mi ligula ut eros</div>
+                                    <input type="submit" value="MORE" class="button button-glr">
+                                </div>
+                            </div>
+                            <div class="carousel-cell img4 small">
+                                <div class="wrap-img">
+                                    <div class="carousel-cell-title">Title</div>
+                                    <div class="carousel-cell-text">Aenean vulputate, turpis a rutrum tempus, dui quam molestie purus, vitae mattis mi ligula ut eros</div>
+                                    <input type="submit" value="MORE" class="button button-glr">
+                                </div>
+                            </div>
+                            <div class="carousel-cell img5">
+                                <div class="wrap-img">
+                                <div class="carousel-cell-title">Title</div>
+                                <div class="carousel-cell-text">Aenean vulputate, turpis a rutrum tempus, dui quam molestie purus, vitae mattis mi ligula ut eros</div>
+                                <input type="submit" value="MORE" class="button button-glr">
+                            </div>
+                            </div>
+                            <div class="carousel-cell img6">
+                                <div class="wrap-img">
+                                    <div class="carousel-cell-title">Title</div>
+                                    <div class="carousel-cell-text">Aenean vulputate, turpis a rutrum tempus, dui quam molestie purus, vitae mattis mi ligula ut eros</div>
+                                    <input type="submit" value="MORE" class="button button-glr">
+                                </div>
+                            </div>
+                            <div class="carousel-cell img7 small">
+                                <div class="wrap-img">
+                                    <div class="carousel-cell-title">Title</div>
+                                    <div class="carousel-cell-text">Aenean vulputate, turpis a rutrum tempus, dui quam molestie purus, vitae mattis mi ligula ut eros</div>
+                                    <input type="submit" value="MORE" class="button button-glr">
+                                </div>
+                            </div>
+                            <div class="carousel-cell img8">
+                                <div class="wrap-img">
+                                    <div class="carousel-cell-title">Title</div>
+                                    <div class="carousel-cell-text">Aenean vulputate, turpis a rutrum tempus, dui quam molestie purus, vitae mattis mi ligula ut eros</div>
+                                    <input type="submit" value="MORE" class="button button-glr">
+                                </div>
+                            </div>
+                            <div class="carousel-cell img9">
+                                <div class="wrap-img">
+                                    <div class="carousel-cell-title">Title</div>
+                                    <div class="carousel-cell-text">Aenean vulputate, turpis a rutrum tempus, dui quam molestie purus, vitae mattis mi ligula ut eros</div>
+                                    <input type="submit" value="MORE" class="button button-glr">
+                                </div>
+                            <div class="carousel-cell img10 small">
+                                <div class="wrap-img">
+                                    <div class="carousel-cell-title">Title</div>
+                                    <div class="carousel-cell-text">Aenean vulputate, turpis a rutrum tempus, dui quam molestie purus, vitae mattis mi ligula ut eros</div>
+                                    <input type="submit" value="MORE" class="button button-glr">
+                                </div>
+                            </div>
+                            <div class="carousel-cell img11">
+                                <div class="wrap-img">
+                                    <div class="carousel-cell-title">Title</div>
+                                    <div class="carousel-cell-text">Aenean vulputate, turpis a rutrum tempus, dui quam molestie purus, vitae mattis mi ligula ut eros</div>
+                                    <input type="submit" value="MORE" class="button button-glr">
+                                </div>
+                            </div>
+                            <div class="carousel-cell img12">
+                                <div class="wrap-img">
+                                    <div class="carousel-cell-title">Title</div>
+                                    <div class="carousel-cell-text">Aenean vulputate, turpis a rutrum tempus, dui quam molestie purus, vitae mattis mi ligula ut eros</div>
+                                    <input type="submit" value="MORE" class="button button-glr">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="page" id="features">
+                    <div class="page-title">Features</div>
+                    <div class="grid-section">
+                        <div class="grid-section-block">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="512" height="512" x="0" y="0" viewBox="0 0 426.667 426.667" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g transform="matrix(6.123233995736766e-17,1,-1,6.123233995736766e-17,426.66699981689453,-0.00000762939453125)">
+                                    <g xmlns="http://www.w3.org/2000/svg">
+                                        <g>
+                                            <path d="M416,298.667V256L245.333,149.333V32c0-17.707-14.293-32-32-32s-32,14.293-32,32v117.333L10.667,256v42.667    l170.667-53.333v117.333l-42.667,32v32l74.667-21.333L288,426.667v-32l-42.667-32V245.333L416,298.667z" fill="#000000" data-original="#000000" class=""/>
+                                        </g>
+                                    </g>
+                                    <g xmlns="http://www.w3.org/2000/svg">
+                                    </g>
+                                    <g xmlns="http://www.w3.org/2000/svg">
+                                    </g>
+                                    <g xmlns="http://www.w3.org/2000/svg">
+                                    </g>
+                                    <g xmlns="http://www.w3.org/2000/svg">
+                                    </g>
+                                    <g xmlns="http://www.w3.org/2000/svg">
+                                    </g>
+                                    <g xmlns="http://www.w3.org/2000/svg">
+                                    </g>
+                                    <g xmlns="http://www.w3.org/2000/svg">
+                                    </g>
+                                    <g xmlns="http://www.w3.org/2000/svg">
+                                    </g>
+                                    <g xmlns="http://www.w3.org/2000/svg">
+                                    </g>
+                                    <g xmlns="http://www.w3.org/2000/svg">
+                                    </g>
+                                    <g xmlns="http://www.w3.org/2000/svg">
+                                    </g>
+                                    <g xmlns="http://www.w3.org/2000/svg">
+                                    </g>
+                                    <g xmlns="http://www.w3.org/2000/svg">
+                                    </g>
+                                    <g xmlns="http://www.w3.org/2000/svg">
+                                    </g>
+                                    <g xmlns="http://www.w3.org/2000/svg">
+                                    </g>
+                                    </g></svg>
+                            </div>
+                            <div class="feature-title">
+                                One
+                            </div>
+                            <div class="feature-text">
+                                Duis vel erat odio. Duis sed elementum magna, vel egestas dui. 
+                            </div>
+                        </div>
+                        <div class="grid-section-block">
+                            <div class="feature-icon">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 512.032 512.032" style="enable-background:new 0 0 512.032 512.032;" xml:space="preserve">
+                                <g>
+                                    <g>
+                                        <path d="M496.016,224c-8.832,0-16,7.168-16,16v181.184l-128,51.2V304c0-8.832-7.168-16-16-16c-8.832,0-16,7.168-16,16v168.352
+                                            l-128-51.2V167.648l74.144,29.664c8.096,3.264,17.504-0.704,20.8-8.928c3.296-8.192-0.704-17.504-8.928-20.8l-95.776-38.336
+                                            c0,0,0,0-0.032,0l-0.256-0.096c-3.808-1.536-8.064-1.536-11.872,0l-0.288,0.096c0,0,0,0-0.032,0L10.064,193.152
+                                            C4.016,195.584,0.016,201.44,0.016,208v288c0,5.312,2.656,10.272,7.04,13.248c2.688,1.824,5.792,2.752,8.96,2.752
+                                            c2.016,0,4.032-0.384,5.952-1.152l154.048-61.6l153.76,61.504c0,0,0,0,0.032,0l0.288,0.128c3.808,1.536,8.064,1.536,11.872,0
+                                            l0.288-0.128c0,0,0,0,0.032,0L502,446.88c6.016-2.464,10.016-8.32,10.016-14.88V240C512.016,231.168,504.848,224,496.016,224z
+                                            M160.016,421.152l-128,51.2V218.816l128-51.2V421.152z"/>
+                                    </g>
+                                </g>
+                                <g>
+                                    <g>
+                                        <path d="M400.016,64c-26.464,0-48,21.536-48,48s21.536,48,48,48s48-21.536,48-48S426.48,64,400.016,64z M400.016,128
+                                            c-8.832,0-16-7.168-16-16c0-8.832,7.168-16,16-16c8.832,0,16,7.168,16,16C416.016,120.832,408.848,128,400.016,128z"/>
+                                    </g>
+                                </g>
+                                <g>
+                                    <g>
+                                        <path d="M400.016,0c-61.76,0-112,50.24-112,112c0,57.472,89.856,159.264,100.096,170.688c3.04,3.36,7.36,5.312,11.904,5.312
+                                            s8.864-1.952,11.904-5.312C422.16,271.264,512.016,169.472,512.016,112C512.016,50.24,461.776,0,400.016,0z M400.016,247.584
+                                            c-34.944-41.44-80-105.056-80-135.584c0-44.096,35.904-80,80-80s80,35.904,80,80C480.016,142.496,434.96,206.144,400.016,247.584z
+                                            "/>
+                                    </g>
+                                </g>
+                                </svg>
+                            </div>
+                            <div class="feature-title">
+                                Two
+                            </div>
+                            <div class="feature-text">
+                                Ut volutpat gravida leo eget mattis. 
+                            </div>
+                        </div>
+                        <div class="grid-section-block">
+                            <div class="feature-icon">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                <g>
+                                    <g>
+                                        <path d="M467,0C448.858,0,65.669,0,45,0C20.187,0,0,20.187,0,45v422c0,24.813,20.187,45,45,45c22.168,0,404.583,0,422,0
+                                            c24.813,0,45-20.187,45-45V45C512,20.187,491.813,0,467,0z M90,482H45c-8.271,0-15-6.729-15-15v-15h60V482z M90,422H30v-60h60V422
+                                            z M90,332H30v-60h60V332z M90,242H30v-62h60V242z M90,150H30V90h60V150z M90,60H30V45c0-8.271,6.729-15,15-15h45V60z M392,482H120
+                                            V272h272V482z M392,242H120V30h272V242z M482,467c0,8.271-6.729,15-15,15h-45v-30h60V467z M482,422h-60v-60h60V422z M482,332h-60
+                                            v-60h60V332z M482,242h-60v-62h60V242z M482,150h-60V90h60V150z M482,60h-60V30h45c8.271,0,15,6.729,15,15V60z"/>
+                                    </g>
+                                </g>
+                                </svg>
+                            </div>
+                            <div class="feature-title">
+                                Three
+                            </div>
+                            <div class="feature-text">
+                                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere. 
+                            </div>
+                        </div>
+                        <div class="grid-section-block">
+                            <div class="feature-icon">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 477.849 477.849" style="enable-background:new 0 0 477.849 477.849;" xml:space="preserve">
+                                <g>
+                                    <g>
+                                        <path d="M374.099,385.518c71.737-74.859,69.207-193.698-5.652-265.435s-193.698-69.206-265.435,5.652
+                                            c-69.586,72.615-69.586,187.168,0,259.783l-48.777,65.024c-5.655,7.541-4.127,18.238,3.413,23.893s18.238,4.127,23.893-3.413
+                                            l47.275-63.044c65.4,47.651,154.078,47.651,219.477,0l47.275,63.044c5.655,7.541,16.353,9.069,23.893,3.413
+                                            c7.541-5.655,9.069-16.353,3.413-23.893L374.099,385.518z M255.623,255.982c0,3.693-1.198,7.286-3.413,10.24l-51.2,68.267
+                                            c-5.655,7.541-16.353,9.069-23.893,3.413s-9.069-16.353-3.413-23.893l47.787-63.71v-96.717c0-9.426,7.641-17.067,17.067-17.067
+                                            s17.067,7.641,17.067,17.067V255.982z"/>
+                                    </g>
+                                </g>
+                                <g>
+                                    <g>
+                                        <path d="M145.286,24.984C111.544-7.918,57.519-7.237,24.616,26.505c-32.314,33.139-32.318,85.997-0.008,119.141
+                                            c6.665,6.663,17.468,6.663,24.132,0l96.546-96.529C151.949,42.452,151.949,31.649,145.286,24.984z"/>
+                                    </g>
+                                </g>
+                                <g>
+                                    <g>
+                                        <path d="M452.486,24.984c-33.323-33.313-87.339-33.313-120.661,0c-6.663,6.665-6.663,17.468,0,24.132l96.529,96.529
+                                            c6.665,6.663,17.468,6.663,24.132,0C485.799,112.323,485.799,58.307,452.486,24.984z"/>
+                                    </g>
+                                </g>
+                                </svg>
+                            </div>
+                            <div class="feature-title">
+                                Four
+                            </div>
+                            <div class="feature-text">
+                                Aliquam ac pulvinar orci. Aenean vulputate volutpat commodo. Maecenas.
+                            </div>
+                        </div>
+                        <div class="grid-section-block">
+                            <div class="feature-icon">
+                                <svg id="bold" enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg"><g><g><path d="m6 9c-.553 0-1-.448-1-1v-1c0-.552.447-1 1-1s1 .448 1 1v1c0 .552-.447 1-1 1z"/></g></g><g><g><path d="m17 9c-.553 0-1-.448-1-1v-1c0-.552.447-1 1-1s1 .448 1 1v1c0 .552-.447 1-1 1z"/></g></g><g><g><path d="m10 15h-1c-.553 0-1-.448-1-1s.447-1 1-1h1c.552 0 1-.449 1-1v-5c0-.552.447-1 1-1s1 .448 1 1v5c0 1.654-1.346 3-3 3z"/></g></g><g><g><path d="m11.5 20c-1.784 0-3.455-.955-4.361-2.492-.28-.476-.122-1.089.354-1.369.474-.281 1.088-.123 1.369.354.548.929 1.559 1.507 2.638 1.507s2.09-.578 2.639-1.508c.28-.477.893-.635 1.369-.354.476.28.634.894.354 1.369-.907 1.538-2.578 2.493-4.362 2.493z"/></g></g><g><g><g><path d="m23 8c-.552 0-1-.448-1-1v-4c0-.551-.449-1-1-1h-4c-.552 0-1-.448-1-1s.448-1 1-1h4c1.654 0 3 1.346 3 3v4c0 .552-.448 1-1 1z"/></g></g></g><g><g><g><path d="m1 8c-.552 0-1-.448-1-1v-4c0-1.654 1.346-3 3-3h4c.552 0 1 .448 1 1s-.448 1-1 1h-4c-.551 0-1 .449-1 1v4c0 .552-.448 1-1 1z"/></g></g></g><g><g><g><path d="m21 24h-4c-.552 0-1-.448-1-1s.448-1 1-1h4c.551 0 1-.449 1-1v-4c0-.552.448-1 1-1s1 .448 1 1v4c0 1.654-1.346 3-3 3z"/></g></g></g><g><g><g><path d="m7 24h-4c-1.654 0-3-1.346-3-3v-4c0-.552.448-1 1-1s1 .448 1 1v4c0 .551.449 1 1 1h4c.552 0 1 .448 1 1s-.448 1-1 1z"/></g></g></g></svg>
+                            </div>
+                            <div class="feature-title">
+                                Five
+                            </div>
+                            <div class="feature-text">
+                                Morbi facilisis neque sit amet odio semper lacinia. Donec orci. 
+                            </div>
+                        </div>
+                        <div class="grid-section-block">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 512 512" width="512" height="512"><path d="M468.43,116.47c-20.951-27.931-67.711-35.652-128.887-21.514-1.312-3.145-2.667-6.234-4.064-9.243a31.984,31.984,0,0,0-35.7-51.282C286.06,22.21,271.358,16,256,16c-17.639,0-34.385,8.137-49.772,24.185C193.338,53.627,182,72.04,172.455,94.955,111.279,80.819,64.52,88.54,43.571,116.469,19.742,148.233,33.374,200.092,79.938,256q-3.81,4.575-7.377,9.17a31.977,31.977,0,0,0-31.646,52.954c-12.76,31.346-11.878,58.02,2.655,77.4,14.094,18.789,39.858,28.436,73.84,28.435,16.534,0,35.021-2.293,55.045-6.921,9.543,22.915,20.883,41.329,33.773,54.771C221.615,487.863,238.361,496,256,496s34.385-8.137,49.772-24.185c12.888-13.441,24.227-31.851,33.77-54.763q6.419,1.483,12.679,2.652a32,32,0,0,0,63.075,2.965c23.9-3.246,42.2-12.549,53.133-27.138,23.828-31.763,10.2-83.622-36.365-139.531C478.627,200.09,492.257,148.232,468.43,116.47Zm-12.8,9.6c18.536,24.709,5.376,69.34-34.231,117.694a464.789,464.789,0,0,0-57.492-52.894c-3.758-29.113-10.125-56.789-18.577-80.817C398.238,98.253,439.125,104.066,455.63,126.071Zm-125.9,271.985a412.988,412.988,0,0,1-55.118-19.685,567.178,567.178,0,0,0,50.432-29.415q10.537-6.891,20.688-14.19A368.316,368.316,0,0,1,329.734,398.056Zm-147.468,0a368.421,368.421,0,0,1-16-63.291q10.128,7.275,20.689,14.19a566.986,566.986,0,0,0,50.432,29.416A413.069,413.069,0,0,1,182.266,398.056Zm0-284.112a412.988,412.988,0,0,1,55.118,19.685,567.178,567.178,0,0,0-50.432,29.415q-10.538,6.891-20.688,14.19A368.316,368.316,0,0,1,182.266,113.944Zm13.442,221.62c-11.216-7.334-22.14-15.059-32.532-22.988a505.5,505.5,0,0,1,0-113.152c10.392-7.929,21.317-15.655,32.532-22.989A544.9,544.9,0,0,1,256,142.216a544.7,544.7,0,0,1,60.292,34.22c11.216,7.334,22.14,15.059,32.532,22.988A501.517,501.517,0,0,1,352,256a501.451,501.451,0,0,1-3.176,56.576c-10.392,7.929-21.317,15.655-32.532,22.989A544.9,544.9,0,0,1,256,369.784,544.7,544.7,0,0,1,195.708,335.564Zm-49.965-36.889A431.841,431.841,0,0,1,101.111,256a432.351,432.351,0,0,1,44.633-42.68C144.594,227.363,144,241.648,144,256S144.594,284.632,145.743,298.675ZM329.734,113.944a368.421,368.421,0,0,1,16,63.291q-10.128-7.275-20.689-14.19a566.986,566.986,0,0,0-50.432-29.416A413.069,413.069,0,0,1,329.734,113.944Zm36.523,99.381A431.841,431.841,0,0,1,410.889,256a432.351,432.351,0,0,1-44.633,42.68C367.406,284.637,368,270.352,368,256S367.406,227.368,366.257,213.325ZM328,64a16,16,0,1,1-16-16A16.019,16.019,0,0,1,328,64ZM256,32c10.468,0,20.791,4.158,30.772,12.349a31.98,31.98,0,0,0,35.094,50.087q1.014,2.239,2,4.53A444.147,444.147,0,0,0,256,124.483a444.153,444.153,0,0,0-67.877-25.522C206.362,56.276,230.834,32,256,32ZM56.37,126.07c16.505-22,57.39-27.818,110.3-16.016-8.45,24.024-14.817,51.694-18.575,80.807a465.419,465.419,0,0,0-57.494,52.9C50.994,195.412,37.833,150.78,56.37,126.07ZM64,280a16,16,0,1,1-16,16A16.019,16.019,0,0,1,64,280ZM56.371,385.931c-12.957-17.282-8.8-40.6-1.618-59.3A31.985,31.985,0,0,0,86.53,273.3q1.99-2.535,4.069-5.068a464.756,464.756,0,0,0,57.494,52.9c3.758,29.113,10.125,56.789,18.577,80.817C113.763,413.748,72.876,407.934,56.371,385.931ZM256,480c-25.166,0-49.638-24.276-67.877-66.962A444.014,444.014,0,0,0,256,387.517a444.27,444.27,0,0,0,67.877,25.522C305.638,455.724,281.166,480,256,480Zm128-48a16,16,0,1,1,16-16A16.019,16.019,0,0,1,384,432Zm71.627-46.067c-8.1,10.81-22.207,17.886-41.033,20.686a32,32,0,0,0-60.183-2.79q-4.485-.852-9.08-1.885c8.45-24.023,14.816-51.693,18.574-80.805a465.329,465.329,0,0,0,57.494-52.9C461.006,316.588,474.166,361.22,455.627,385.933Z"/><path d="M256,192a64,64,0,1,0,64,64A64.072,64.072,0,0,0,256,192Zm0,112a48,48,0,1,1,48-48A48.055,48.055,0,0,1,256,304Z"/></svg>
+                            </div>
+                            <div class="feature-title">
+                                Six
+                            </div>
+                            <div class="feature-text">
+                                Sed molestie et purus nec molestie. Cras iaculis in elit in.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page" id="write-us">
+                    <div class="page-title">Write to us</div>
+                    <div class="form-section">
+                        <form>
+                            <div class="field main-field">
+                                <div class="field-block">
+                                    <label class="label-title">Name:</label>
+                                    <input type="text" class="input-field">
+                                </div>
+                                <div class="field-block">
+                                    <label class="label-title">Email:</label>
+                                    <input type="email" class="input-field">
+                                </div>
+                                <div class="field-block">
+                                    <label class="label-title">Phone:</label>
+                                    <input type="number" class="input-field">
+                                </div>
+                            </div>
+                            <div class="field half-field">
+                                <label class="label-title">Contact me via:</label>
+                                <div>
+                                    <input type="radio" name="rd" id="email-rd"><label for="email-rd">Email</label>
+                                    <input type="radio" name="rd" id="phone-rd"><label for="phone-rd">Phone</label>
+                                    <input type="radio" name="rd" id="telegtam-rd"><label for="telegtam-rd">Telegram</label>
+                                </div>
+                            </div>
+                            <div class="field select-field">
+                                <label class="label-title">Topic:</label>
+                                <select class="input-field">
+                                    <option value="Post my story">Post my story</option>
+                                </select>
+                            </div>
+                            <div class="field textarea-field">
+                                <label class="label-title">Message:</label>
+                                <textarea></textarea>
+                            </div>
+                            <div class="field submit-field">
+                                <div>
+                                    <input type="checkbox" id="check-human">
+                                    <label for="check-human" class="label-title lbl-human">I am human</label>
+                                </div>
+                                <input type="submit" value="SEND" class="button button-submit">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div> 
+        </main>
+        <footer>
+            <ul class="social">
+                <li class="circle">
+                    <svg version="1.1" class="twitter-logo" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                    <g>
+                        <g>
+                            <path d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016
+                                c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992
+                                c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056
+                                c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152
+                                c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792
+                                c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44
+                                C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568
+                                C480.224,136.96,497.728,118.496,512,97.248z"/>
+                        </g>
+                    </g>
+                    </svg>
+                </li>
+                <li class="circle">
+                    <svg class="facebook-logo" id="Bold" enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"/></svg>
+                </li>
+                <li class="circle">
+                    <svg class="instagram-logo" height="511pt" viewBox="0 0 511 511.9" width="511pt" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <radialGradient id="instagram-gradient" r="150%" cx="30%" cy="107%">
+                                <stop stop-color="#fdf497" offset="0" />
+                                <stop stop-color="#fdf497" offset="0.05" />
+                                <stop stop-color="#fd5949" offset="0.45" />
+                                <stop stop-color="#d6249f" offset="0.6" />
+                                <stop stop-color="#285AEB" offset="0.9" />
+                            </radialGradient>
+                        </defs>
+                        <path d="m510.949219 150.5c-1.199219-27.199219-5.597657-45.898438-11.898438-62.101562-6.5-17.199219-16.5-32.597657-29.601562-45.398438-12.800781-13-28.300781-23.101562-45.300781-29.5-16.296876-6.300781-34.898438-10.699219-62.097657-11.898438-27.402343-1.300781-36.101562-1.601562-105.601562-1.601562s-78.199219.300781-105.5 1.5c-27.199219 1.199219-45.898438 5.601562-62.097657 11.898438-17.203124 6.5-32.601562 16.5-45.402343 29.601562-13 12.800781-23.097657 28.300781-29.5 45.300781-6.300781 16.300781-10.699219 34.898438-11.898438 62.097657-1.300781 27.402343-1.601562 36.101562-1.601562 105.601562s.300781 78.199219 1.5 105.5c1.199219 27.199219 5.601562 45.898438 11.902343 62.101562 6.5 17.199219 16.597657 32.597657 29.597657 45.398438 12.800781 13 28.300781 23.101562 45.300781 29.5 16.300781 6.300781 34.898438 10.699219 62.101562 11.898438 27.296876 1.203124 36 1.5 105.5 1.5s78.199219-.296876 105.5-1.5c27.199219-1.199219 45.898438-5.597657 62.097657-11.898438 34.402343-13.300781 61.601562-40.5 74.902343-74.898438 6.296876-16.300781 10.699219-34.902343 11.898438-62.101562 1.199219-27.300781 1.5-36 1.5-105.5s-.101562-78.199219-1.300781-105.5zm-46.097657 209c-1.101562 25-5.300781 38.5-8.800781 47.5-8.601562 22.300781-26.300781 40-48.601562 48.601562-9 3.5-22.597657 7.699219-47.5 8.796876-27 1.203124-35.097657 1.5-103.398438 1.5s-76.5-.296876-103.402343-1.5c-25-1.097657-38.5-5.296876-47.5-8.796876-11.097657-4.101562-21.199219-10.601562-29.398438-19.101562-8.5-8.300781-15-18.300781-19.101562-29.398438-3.5-9-7.699219-22.601562-8.796876-47.5-1.203124-27-1.5-35.101562-1.5-103.402343s.296876-76.5 1.5-103.398438c1.097657-25 5.296876-38.5 8.796876-47.5 4.101562-11.101562 10.601562-21.199219 19.203124-29.402343 8.296876-8.5 18.296876-15 29.398438-19.097657 9-3.5 22.601562-7.699219 47.5-8.800781 27-1.199219 35.101562-1.5 103.398438-1.5 68.402343 0 76.5.300781 103.402343 1.5 25 1.101562 38.5 5.300781 47.5 8.800781 11.097657 4.097657 21.199219 10.597657 29.398438 19.097657 8.5 8.300781 15 18.300781 19.101562 29.402343 3.5 9 7.699219 22.597657 8.800781 47.5 1.199219 27 1.5 35.097657 1.5 103.398438s-.300781 76.300781-1.5 103.300781zm0 0"/><path d="m256.449219 124.5c-72.597657 0-131.5 58.898438-131.5 131.5s58.902343 131.5 131.5 131.5c72.601562 0 131.5-58.898438 131.5-131.5s-58.898438-131.5-131.5-131.5zm0 216.800781c-47.097657 0-85.300781-38.199219-85.300781-85.300781s38.203124-85.300781 85.300781-85.300781c47.101562 0 85.300781 38.199219 85.300781 85.300781s-38.199219 85.300781-85.300781 85.300781zm0 0"/><path d="m423.851562 119.300781c0 16.953125-13.746093 30.699219-30.703124 30.699219-16.953126 0-30.699219-13.746094-30.699219-30.699219 0-16.957031 13.746093-30.699219 30.699219-30.699219 16.957031 0 30.703124 13.742188 30.703124 30.699219zm0 0"/></svg>
+                </li>
+                <li class="circle">
+                    <svg class="youtube-logo" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        width="90.677px" height="90.677px" viewBox="0 0 90.677 90.677" style="enable-background:new 0 0 90.677 90.677;"
+                        xml:space="preserve">
+                    <g>
+                        <g>
+                            <path d="M82.287,45.907c-0.937-4.071-4.267-7.074-8.275-7.521c-9.489-1.06-19.098-1.065-28.66-1.06
+                                c-9.566-0.005-19.173,0-28.665,1.06c-4.006,0.448-7.334,3.451-8.27,7.521c-1.334,5.797-1.35,12.125-1.35,18.094
+                                c0,5.969,0,12.296,1.334,18.093c0.936,4.07,4.264,7.073,8.272,7.521c9.49,1.061,19.097,1.065,28.662,1.061
+                                c9.566,0.005,19.171,0,28.664-1.061c4.006-0.448,7.336-3.451,8.272-7.521c1.333-5.797,1.34-12.124,1.34-18.093
+                                C83.61,58.031,83.62,51.704,82.287,45.907z M28.9,50.4h-5.54v29.438h-5.146V50.4h-5.439v-4.822H28.9V50.4z M42.877,79.839h-4.629
+                                v-2.785c-1.839,2.108-3.585,3.136-5.286,3.136c-1.491,0-2.517-0.604-2.98-1.897c-0.252-0.772-0.408-1.994-0.408-3.796V54.311
+                                h4.625v18.795c0,1.084,0,1.647,0.042,1.799c0.111,0.718,0.462,1.082,1.082,1.082c0.928,0,1.898-0.715,2.924-2.166v-19.51h4.629
+                                L42.877,79.839L42.877,79.839z M60.45,72.177c0,2.361-0.159,4.062-0.468,5.144c-0.618,1.899-1.855,2.869-3.695,2.869
+                                c-1.646,0-3.234-0.914-4.781-2.824v2.474h-4.625V45.578h4.625v11.189c1.494-1.839,3.08-2.769,4.781-2.769
+                                c1.84,0,3.078,0.969,3.695,2.88c0.311,1.027,0.468,2.715,0.468,5.132V72.177z M77.907,67.918h-9.251v4.525
+                                c0,2.363,0.773,3.543,2.363,3.543c1.139,0,1.802-0.619,2.066-1.855c0.043-0.251,0.104-1.279,0.104-3.134h4.719v0.675
+                                c0,1.491-0.057,2.518-0.099,2.98c-0.155,1.024-0.519,1.953-1.08,2.771c-1.281,1.854-3.179,2.768-5.595,2.768
+                                c-2.42,0-4.262-0.871-5.599-2.614c-0.981-1.278-1.485-3.29-1.485-6.003v-8.941c0-2.729,0.447-4.725,1.43-6.015
+                                c1.336-1.747,3.177-2.617,5.54-2.617c2.321,0,4.161,0.87,5.457,2.617c0.969,1.29,1.432,3.286,1.432,6.015v5.285H77.907z"/>
+                            <path d="M70.978,58.163c-1.546,0-2.321,1.181-2.321,3.541v2.362h4.625v-2.362C73.281,59.344,72.508,58.163,70.978,58.163z"/>
+                            <path d="M53.812,58.163c-0.762,0-1.534,0.36-2.307,1.125v15.559c0.772,0.774,1.545,1.14,2.307,1.14
+                                c1.334,0,2.012-1.14,2.012-3.445V61.646C55.824,59.344,55.146,58.163,53.812,58.163z"/>
+                            <path d="M56.396,34.973c1.705,0,3.479-1.036,5.34-3.168v2.814h4.675V8.82h-4.675v19.718c-1.036,1.464-2.018,2.188-2.953,2.188
+                                c-0.626,0-0.994-0.37-1.096-1.095c-0.057-0.153-0.057-0.722-0.057-1.817V8.82h-4.66v20.4c0,1.822,0.156,3.055,0.414,3.836
+                                C53.854,34.363,54.891,34.973,56.396,34.973z"/>
+                            <path d="M23.851,20.598v14.021h5.184V20.598L35.271,0h-5.242l-3.537,13.595L22.812,0h-5.455c1.093,3.209,2.23,6.434,3.323,9.646
+                                C22.343,14.474,23.381,18.114,23.851,20.598z"/>
+                            <path d="M42.219,34.973c2.342,0,4.162-0.881,5.453-2.641c0.981-1.291,1.451-3.325,1.451-6.067v-9.034
+                                c0-2.758-0.469-4.774-1.451-6.077c-1.291-1.765-3.11-2.646-5.453-2.646c-2.33,0-4.149,0.881-5.443,2.646
+                                c-0.993,1.303-1.463,3.319-1.463,6.077v9.034c0,2.742,0.47,4.776,1.463,6.067C38.069,34.092,39.889,34.973,42.219,34.973z
+                                M39.988,16.294c0-2.387,0.724-3.577,2.231-3.577c1.507,0,2.229,1.189,2.229,3.577v10.852c0,2.387-0.722,3.581-2.229,3.581
+                                c-1.507,0-2.231-1.194-2.231-3.581V16.294z"/>
+                        </g>
+                    </g>
+                </svg>
+                </li>
+                <li class="circle">
+                    <svg class="gmail-logo"version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                    <g>
+                        <g>
+                            <path d="M464,64h-16H64H48C21.504,64,0,85.504,0,112v16v256v16c0,26.496,21.504,48,48,48h16h384h16c26.496,0,48-21.504,48-48v-16
+                                V128v-16C512,85.504,490.496,64,464,64z M407.488,96L256,215.616L104.512,96H407.488z M448,416H64V148.672l192,147.68L448,148.64
+                                V416z"/>
+                        </g>
+                    </g>
+                    </svg>
+                </li>
+            </ul>
+            <div class="footer-text">©UNTITLED 2020</div>
+        </footer>
+    </div>
+</body>
+</html>
